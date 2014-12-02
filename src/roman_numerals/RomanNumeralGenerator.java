@@ -1,7 +1,6 @@
 package roman_numerals;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by administrator on 12/1/14.
@@ -9,11 +8,11 @@ import java.util.Map;
 public class RomanNumeralGenerator {
     public String converter(int number) {
         String romanNumeral = "";
-//        Map<String, Integer> m = new HashMap<String, Integer>();
-          HashMap newmap = new HashMap();
+        HashMap numeralMap = new HashMap();
 
-          newmap.put(4, "IV");
-          newmap.put(1, "I");
+        numeralMap.put(4, "IV");
+        numeralMap.put(1, "I");
+
 
         for(int i=0; i < number; i++){
             if (number < 4) {
