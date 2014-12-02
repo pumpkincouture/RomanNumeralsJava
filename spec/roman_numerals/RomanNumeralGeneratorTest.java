@@ -30,4 +30,10 @@ public class RomanNumeralGeneratorTest{
 
     @Test
     public void testConvertsFivetoV() { assertEquals("V", test.converter(5)); }
+
+    @Test
+    public void testConvertsSixtoVI() { assertEquals("VI", test.converter(6)); }
+
+    @Test
+    public void testConvertsSeventoVII() { assertEquals("VII", test.converter(7)); }
 }

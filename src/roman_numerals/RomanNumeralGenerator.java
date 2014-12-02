@@ -1,8 +1,6 @@
 package roman_numerals;
 
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by administrator on 12/1/14.
@@ -20,8 +18,10 @@ public class RomanNumeralGenerator {
         for(int i=0; i < number; i++){
             if (number < 4) {
                 romanNumeral += "I";
-            } else {
+            } else if (number < 6) {
                 romanNumeral = numeralMap.get(number);
+            } else {
+                romanNumeral = "VI";
             }
         }
         return romanNumeral;
