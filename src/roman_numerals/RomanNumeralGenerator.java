@@ -1,6 +1,6 @@
 package roman_numerals;
 
-import java.util.HashMap;
+import java.util.*;
 
 /**
  * Created by administrator on 12/1/14.
@@ -8,21 +8,20 @@ import java.util.HashMap;
 public class RomanNumeralGenerator {
     public String converter(int number) {
         String romanNumeral = "";
-        HashMap<Integer, String> numeralMap = new HashMap();
+        LinkedHashMap<Integer, String> numeralMap = new LinkedHashMap();
 
-        numeralMap.put(4, "IV");
-        numeralMap.put(1, "I");
         numeralMap.put(5, "V");
+        numeralMap.put(4, "IV");
+        
+        for (Map.Entry<Integer, String> entry : numeralMap.entrySet()) {
+          while (number >= entry.getKey()) {
+              romanNumeral += entry.getValue();
+              number -= entry.getKey();
+          }
+        }
 
-
-        for(int i=0; i < number; i++){
-            if (number < 4) {
-                romanNumeral += "I";
-            } else if (number < 6) {
-                romanNumeral = numeralMap.get(number);
-            } else {
-                romanNumeral = "VI";
-            }
+        for(int i=0; i < number; i++) {
+            romanNumeral += "I";
         }
         return romanNumeral;
     }
