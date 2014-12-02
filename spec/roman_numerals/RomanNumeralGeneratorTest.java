@@ -26,8 +26,8 @@ public class RomanNumeralGeneratorTest{
     }
 
     @Test
-    public void testConvertsFourToIV() {
-        assertEquals("IV", test.converter(4));
-    }
+    public void testConvertsFourToIV() { assertEquals("IV", test.converter(4)); }
 
+    @Test
+    public void testConvertsFivetoV() { assertEquals("V", test.converter(5)); }
 }
