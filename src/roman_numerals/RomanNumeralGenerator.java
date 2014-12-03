@@ -11,6 +11,8 @@ public class RomanNumeralGenerator {
         LinkedHashMap<Integer, String> numeralMap = new LinkedHashMap();
 
 
+        numeralMap.put(1000, "M");
+        numeralMap.put(900, "CM");
         numeralMap.put(500, "D");
         numeralMap.put(400, "CD");
         numeralMap.put(100, "C");

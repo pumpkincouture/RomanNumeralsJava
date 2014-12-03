@@ -78,4 +78,13 @@ public class RomanNumeralGeneratorTest{
 
     @Test
     public void testConvertsFiveHundredtoD() { assertEquals("D", test.converter(500)); }
+
+    @Test
+    public void testConvertsNineHundredtoCM() { assertEquals("CM", test.converter(900)); }
+
+    @Test
+    public void testConvertsOneThousandtoM() { assertEquals("M", test.converter(1000)); }
+
+    @Test
+    public void testConvertsNineteenNinetyNinetoMCMXCIX() { assertEquals("MCMXCIX", test.converter(1999)); }
 }
